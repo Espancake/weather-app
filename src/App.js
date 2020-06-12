@@ -8,6 +8,25 @@ const api = {
 function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
+  let weatherNOw = "";
+
+
+
+ /* const climaClassName = ()=>{ debugger;
+              switch (weather.weather[0].main) {
+            case 'Clouds': 
+            weatherNOw = 'app clouds'
+              break;
+            case 'Clear': weatherNOw = 'app clear'
+              break;
+            case 'Snow':weatherNOw = 'app snow'
+              break;
+            case 'Rain':weatherNOw = 'app rain'
+              break;
+            default: weatherNOw = 'app'
+              break;
+          }
+  }*/
 
  const search = evt => {
     if (evt.key === "Enter") {
@@ -16,7 +35,7 @@ function App() {
         .then(result => {
           setWeather(result);
           setQuery('');
-          console.log(result);
+
         });
     }
   }
@@ -34,9 +53,8 @@ function App() {
   }
 
 
-
-  return (
-    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp <= 16) ? 'app cold' : 'app') : 'app'}>
+  return ( 
+    <div className={(typeof weather.main != "undefined") ? `app ${weather.weather[0].main}`:'app'}>
       <main>
         <div className="search-box">
           <input 

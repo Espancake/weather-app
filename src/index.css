@@ -9,15 +9,26 @@ body{
 }
 
 .app {
-  background-image: url('./assets/sunny-wall.jpg');
+  background-image: url('./assets/wall.jpg');
   background-size:cover;
   background-position:bottom;
-  transition-timing-function: 0.4 ease-out;
+  transition: 0.8s ease-out;
 }
 
-.app.cold{
-  background-image: url('./assets/cold-wall.jpg');
+.app.Clouds{
+  background-image: url('./assets/cloudy-wall.jpg');
+}
 
+.app.Rain{
+  background-image: url('./assets/rainy-wall.jpg');
+}
+
+.app.Snow{
+  background-image: url('./assets/cold-wall.jpg');
+}
+
+.app.Clear{
+  background-image: url('./assets/clear-wall.jpg');
 }
 
 main {
