@@ -31,6 +31,10 @@ body{
   background-image: url('./assets/clear-wall.jpg');
 }
 
+.app.Drizzle{
+  background-image: url('./assets/drizzle-wall.jpg');
+}
+
 main {
   min-height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
